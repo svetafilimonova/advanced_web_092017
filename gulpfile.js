@@ -133,3 +133,10 @@ gulp.task('sprite:svg', function() {
       }))
       .pipe(gulp.dest('./src/images/sprite'));
   });
+
+
+  // ------------------------------------------ copy fonts --------------------------------//
+gulp.task('copy.fonts', function() {
+    return gulp.src('./src/fonts/**/*.*', {since: gulp.lastRun('copy.fonts')})
+      .pipe(gulp.dest('./build/assets/fonts'));
+  });
