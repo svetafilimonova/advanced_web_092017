@@ -2,8 +2,6 @@ const gulp = require('gulp');
 const del = require('del');
 const browserSync = require('browser-sync').create();
 const pug = require('gulp-pug');
-const svgmin = require('gulp-svgmin');
-const cheerio = require('gulp-cheerio');
 
 // styles 
 const sass = require('gulp-sass');
@@ -102,42 +100,3 @@ gulp.task('default', gulp.series(
     gulp.parallel(styles, scripts, templates, images),
     gulp.parallel(watch, server)
 ));
-
-
-// svg sprite
-
-gulp.task('sprite:svg', function() {
-    return gulp.src('./src/images/svg-sprites/*.svg')
-      .pipe(svgmin({
-        js2svg: {
-          pretty: true
-        }
-      }))
-      .pipe(cheerio({
-        run: function($) {
-          $('[fill]').removeAttr('fill');
-          $('[stroke]').removeAttr('stroke');
-          $('[style]').removeAttr('style');
-        },
-        parserOptions: { xmlMode: true }
-      }))
-      .pipe(replace('&gt;', '>'))
-      .pipe(svgSprite({
-        mode: {
-          symbol: {
-            sprite: '../sprite.svg'
-          }
-        }
-      }))
-      .pipe(gulp.dest('./src/images/sprite'));
-  });
-
-//   GULP-REPLACE
-
-  var replace = require('gulp-replace');
-  
- gulp.task('templates', function(){
-   gulp.src(['file.txt'])
-     .pipe(replace('bar', 'foo'))
-     .pipe(gulp.dest('build/'));
- });
