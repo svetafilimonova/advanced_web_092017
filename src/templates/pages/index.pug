@@ -4,10 +4,10 @@ block variables
   - var title = 'Добро пожаловать'
 
 block content
-  h1 Главная
-  form
-    label(for="email") 
-    input(name="email" id="email")
-    label(for="password") 
-    input(name="password" id="password")
-    button Войти
+  div.wrapper
+    div.authorization-button
+      a.authorization-link Авторизоваться
+    div.welcome
+      div.welcome_photo
+        img.welcome_img(src="assets/images/myphoto.jpg")
+
