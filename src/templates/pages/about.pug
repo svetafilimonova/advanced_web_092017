@@ -4,5 +4,153 @@ block variables
   - var title = 'Обо мне'
 
 block content
-  h1 Обо мне
-  include ../common/technologies.pug
+  section.section.hero
+    .hero__socials
+      ul.socials
+        li.socials__item
+          a.socials__link 
+            svg(id="vk")
+              use(xlink:href=`assets/images/sprite/sprite.svg#vk`)
+        li.socials__item
+          a.socials__link 
+            svg(id="git")
+              use(xlink:href=`assets/images/sprite/sprite.svg#vk`)
+    .hero__menu.hamburger
+    .hero__title
+      .section-title
+        img.section-title__pic
+      .user.hero__user
+        .user__pic
+          img.user__pic-img
+        .user__description
+         .user__name Светлана Филимонова
+         .user__info Личный сайт веб разработчика
+    .hero__scroll-btn
+      a.arrow-down
+  section.section.about
+    .about__left
+      .about__triangle.about__triangle_left
+        svg.triangle.triangle_fill_white
+      .about__left-title
+        .block-title Обо мне
+      .about__left-content
+        .user-description
+          .user-description__image
+            img.user-description__ava
+          .user-description__title
+            .block-subtitle Кто я
+          .user-description__text
+            p Я веб разработчик из Рязани. Мне 25 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+            p Этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
+    .about__right
+      .about__triangle.about__triangle_right
+        svg.triangle.triangle_fill_beige
+      .about__right-title
+        .block-subtitle Чем я могу быть вам полезна
+      .about__right-description
+        p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать несложные задачи на Backend. Но давайте по порядку.
+      .about__right-content
+        ul.skills-list
+          li.skills-list-item
+            .skills-row
+              .skills-row__title Frontend
+              ul.skills-row__list 
+                li.skills-row__item
+                  .skill 
+                    svg.skill__circle
+                    .skill__title HTML5
+                li.skills-row__item
+                  .skill 
+                    svg.skill__circle
+                    .skill__title CSS3
+                li.skills-row__item
+                  .skill 
+                    svg.skill__circle
+                    .skill__title JavaScript&jQuery
+
+          li.skills-list-item
+            .skills-row
+              .skills-row__title Backend
+              ul.skills-row__list 
+                li.skills-row__item
+                  .skill 
+                    svg.skill__circle
+                    .skill__title PHP
+                li.skills-row__item
+                  .skill 
+                    svg.skill__circle
+                    .skill__title MySQL
+                li.skills-row__item
+                  .skill 
+                    svg.skill__circle
+                    .skill__title Node.js&npm
+          li.skills-list-item
+            .skills-row
+              .skills-row__title Workflow
+              ul.skills-row__list 
+                li.skills-row__item
+                  .skill 
+                    svg.skill__circle
+                    .skill__title Git
+                li.skills-row__item
+                  .skill 
+                    svg.skill__circle
+                    .skill__title Gulp
+                li.skills-row__item
+                  .skill 
+                    svg.skill__circle
+                    .skill__title Bower
+  section.section.map
+    .google-map
+    .map__data
+      .contacts
+        .contacts__title
+          .block-subtitle Контакты
+        ul.contacts__list
+          li.contacts__item
+            .contact-row
+              .contact-row__icon
+              .contact-row__text Svetlana.Filimonova.62
+          li.contacts__item
+            .contact-row
+              .contact-row__icon
+              .contact-row__text lana.shvedova@gmail.com
+          li.contacts__item
+            .contact-row
+              .contact-row__icon
+              .contact-row__text +7 953 128 89 51
+          li.contacts__item
+            .contact-row
+              .contact-row__icon
+              .contact-row__text г.Рязань, ул.Кальная, д.38
+
+  footer.footer
+    .footer__row
+      .footer__col.footer__col-left
+        .footer__menu
+          nav.menu
+            ul.menu__list
+              each item in ['Мои работы','Обо мне', 'Блог','Авторизация']
+                li.menu__item
+                  a(href="#").menu__link
+      .footer__col.footer__col-right
+        .footer__socials
+          ul.socials.socials_round
+            li.socials__item
+              a.socials__link 
+                svg(id="vk")
+                  use(xlink:href=`assets/images/sprite/sprite.svg#vk`)
+            li.socials__item
+              a.socials__link 
+                svg(id="git")
+                  use(xlink:href=`assets/images/sprite/sprite.svg#vk`)
+    .footer__row
+      .footer__col.footer__col-left
+        .footer__text.text-content
+          p Я веб-разработчик из Рязани, и этот сайт я сделал в рамка
+      .footer__col.footer__col-right
+        .footer__copyright © Светлана Филимонова | создано с любовью в LoftSchool | 2017
+
+    
+    
+  

@@ -11,18 +11,67 @@
     <script src="/assets/scripts/bundle.js" defer></script>
   </head>
   <body>
-    <div class="wrapper">
-      <div class="authorization-button"><a class="authorization-link">Авторизоваться</a></div>
-      <div class="welcome">
-        <div class="welcome_photo"><img class="welcome_img" src="assets/images/myphoto.jpg"></div>
+    <div class="wrapper intro">
+      <div class="authorization">
+        <div class="authorization__button"><a class="authorization-link" href="#">Авторизоваться</a></div>
       </div>
+      <div class="welcome-wrapper">
+        <div class="welcome">
+          <div class="welcome__photo"><img class="welcome__img" src="assets/images/myphoto.jpg"></div>
+          <div class="welcome__info">
+            <div class="welcome__name">Светлана Филимонова</div>
+            <div class="welcome__site">Личный сайт веб разработчика</div>
+          </div>
+          <div class="welcome__socials">
+            <ul class="socials socials_round">
+              <li class="socials__item"><a class="socials__link"> </a></li>
+              <li class="socials__item"><a class="socials__link"> </a></li>
+            </ul>
+          </div>
+          <div class="nav-menu welcome__menu">
+            <ul class="menu__list">
+              <li class="menu__item"><a class="menu__link" href="my-works.html">Мои работы</a></li>
+              <li class="menu__item"><a class="menu__link" href="about.html">Обо мне</a></li>
+              <li class="menu__item"><a class="menu__link" href="blog.html">Блог</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="auth-form">
+        <div class="auth-form__title">
+          <div class="block-title">Авторизуйтесь</div>
+        </div>
+        <div class="auth-form__row">
+          <div class="auth-form__icon"></div>
+          <div class="auth-form__input">
+            <input type="text">
+          </div>
+        </div>
+        <div class="auth-form__row">
+          <div class="auth-form__icon"></div>
+          <div class="auth-form__input">
+            <input type="text">
+          </div>
+        </div>
+        <div class="auth-form__row auth-form__row-check">
+          <input type="checkbox" id="check">
+          <label for="check">Я человек</label>
+        </div>
+        <div class="auth-form__row auth-form__row-radio">
+          <div class="auth-form__row-title">Вы точно не робот?</div>
+          <input type="radio" name="robot" id="yes">
+          <label for="yes">Да</label>
+          <input type="radio" name="robot" id="no">
+          <label for="no">Не уверен</label>
+        </div>
+      </div>
+      <div class="auth-form__btn">
+        <ul class="button-list intro__button-list">
+          <li class="button-item"><a class="button-link" href="about.html">На главную</a></li>
+          <li class="button-item"><a class="button-link" href="#">Войти</a></li>
+        </ul>
+      </div>
+      <div class="copyright">© Светлана Филимонова | создано с любовью в LoftSchool | 2017</div>
     </div>
-    <h2>Меню</h2>
-    <ul class="menu">
-      <li><a href="/index.html">Главная</a></li>
-      <li><a href="/about.html">Обо мне</a></li>
-      <li><a href="/my-works.html">Мои работы</a></li>
-      <li><a href="/blog.html">Блог</a></li>
-    </ul>
   </body>
 </html>
