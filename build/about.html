@@ -11,21 +11,219 @@
     <script src="/assets/scripts/bundle.js" defer></script>
   </head>
   <body>
-    <h1>Обо мне</h1>
-    <p>Я умею
-      <ul class="technologies">
-        <li> <img src="assets/images/sass.svg"></li>
-        <li> <img src="assets/images/pug.svg"></li>
-        <li> <img src="assets/images/gulp.svg"></li>
-        <li> <img src="assets/images/webpack.svg"></li>
-      </ul>
-    </p>
-    <h2>Меню</h2>
-    <ul class="menu">
-      <li><a href="/index.html">Главная</a></li>
-      <li><a href="/about.html">Обо мне</a></li>
-      <li><a href="/my-works.html">Мои работы</a></li>
-      <li><a href="/blog.html">Блог</a></li>
-    </ul>
+    <section class="section hero">
+      <div class="hero__socials">
+        <ul class="socials">
+          <li class="socials__item"><a class="socials__link"> 
+              <svg id="vk">
+                <use xlink:href="assets/images/sprite/sprite.svg#vk"></use>
+              </svg></a></li>
+          <li class="socials__item"><a class="socials__link"> 
+              <svg id="git">
+                <use xlink:href="assets/images/sprite/sprite.svg#vk"></use>
+              </svg></a></li>
+        </ul>
+      </div>
+      <div class="hero__menu hamburger"></div>
+      <div class="hero__title">
+        <div class="section-title"><img class="section-title__pic"></div>
+        <div class="user hero__user">
+          <div class="user__pic"><img class="user__pic-img"></div>
+          <div class="user__description">
+            <div class="user__name">Светлана Филимонова</div>
+            <div class="user__info">Личный сайт веб разработчика</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero__scroll-btn"><a class="arrow-down"></a></div>
+    </section>
+    <section class="section about">
+      <div class="about__left">
+        <div class="about__triangle about__triangle_left">
+          <svg class="triangle triangle_fill_white"></svg>
+        </div>
+        <div class="about__left-title">
+          <div class="block-title">Обо мне</div>
+        </div>
+        <div class="about__left-content">
+          <div class="user-description">
+            <div class="user-description__image"><img class="user-description__ava"></div>
+            <div class="user-description__title">
+              <div class="block-subtitle">Кто я</div>
+            </div>
+            <div class="user-description__text">
+              <p>Я веб разработчик из Рязани. Мне 25 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.</p>
+              <p>Этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about__right">
+        <div class="about__triangle about__triangle_right">
+          <svg class="triangle triangle_fill_beige"></svg>
+        </div>
+        <div class="about__right-title">
+          <div class="block-subtitle">Чем я могу быть вам полезна</div>
+        </div>
+        <div class="about__right-description">
+          <p>Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать несложные задачи на Backend. Но давайте по порядку.</p>
+        </div>
+        <div class="about__right-content">
+          <ul class="skills-list">
+            <li class="skills-list-item">
+              <div class="skills-row">
+                <div class="skills-row__title">Frontend</div>
+                <ul class="skills-row__list"> 
+                  <li class="skills-row__item">
+                    <div class="skill"> 
+                      <svg class="skill__circle"></svg>
+                      <div class="skill__title">HTML5</div>
+                    </div>
+                  </li>
+                  <li class="skills-row__item">
+                    <div class="skill"> 
+                      <svg class="skill__circle"></svg>
+                      <div class="skill__title">CSS3</div>
+                    </div>
+                  </li>
+                  <li class="skills-row__item">
+                    <div class="skill"> 
+                      <svg class="skill__circle"></svg>
+                      <div class="skill__title">JavaScript&jQuery</div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="skills-list-item">
+              <div class="skills-row">
+                <div class="skills-row__title">Backend</div>
+                <ul class="skills-row__list"> 
+                  <li class="skills-row__item">
+                    <div class="skill"> 
+                      <svg class="skill__circle"></svg>
+                      <div class="skill__title">PHP</div>
+                    </div>
+                  </li>
+                  <li class="skills-row__item">
+                    <div class="skill"> 
+                      <svg class="skill__circle"></svg>
+                      <div class="skill__title">MySQL</div>
+                    </div>
+                  </li>
+                  <li class="skills-row__item">
+                    <div class="skill"> 
+                      <svg class="skill__circle"></svg>
+                      <div class="skill__title">Node.js&npm</div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="skills-list-item">
+              <div class="skills-row">
+                <div class="skills-row__title">Workflow</div>
+                <ul class="skills-row__list"> 
+                  <li class="skills-row__item">
+                    <div class="skill"> 
+                      <svg class="skill__circle"></svg>
+                      <div class="skill__title">Git</div>
+                    </div>
+                  </li>
+                  <li class="skills-row__item">
+                    <div class="skill"> 
+                      <svg class="skill__circle"></svg>
+                      <div class="skill__title">Gulp</div>
+                    </div>
+                  </li>
+                  <li class="skills-row__item">
+                    <div class="skill"> 
+                      <svg class="skill__circle"></svg>
+                      <div class="skill__title">Bower</div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="section map">
+      <div class="google-map"></div>
+      <div class="map__data">
+        <div class="contacts">
+          <div class="contacts__title">
+            <div class="block-subtitle">Контакты</div>
+          </div>
+          <ul class="contacts__list">
+            <li class="contacts__item">
+              <div class="contact-row">
+                <div class="contact-row__icon"></div>
+                <div class="contact-row__text">Svetlana.Filimonova.62</div>
+              </div>
+            </li>
+            <li class="contacts__item">
+              <div class="contact-row">
+                <div class="contact-row__icon"></div>
+                <div class="contact-row__text">lana.shvedova@gmail.com</div>
+              </div>
+            </li>
+            <li class="contacts__item">
+              <div class="contact-row">
+                <div class="contact-row__icon"></div>
+                <div class="contact-row__text">+7 953 128 89 51</div>
+              </div>
+            </li>
+            <li class="contacts__item">
+              <div class="contact-row">
+                <div class="contact-row__icon"></div>
+                <div class="contact-row__text">г.Рязань, ул.Кальная, д.38</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer__row">
+        <div class="footer__col footer__col-left">
+          <div class="footer__menu">
+            <nav class="menu">
+              <ul class="menu__list">
+                <li class="menu__item"><a class="menu__link" href="#"></a></li>
+                <li class="menu__item"><a class="menu__link" href="#"></a></li>
+                <li class="menu__item"><a class="menu__link" href="#"></a></li>
+                <li class="menu__item"><a class="menu__link" href="#"></a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="footer__col footer__col-right">
+          <div class="footer__socials">
+            <ul class="socials socials_round">
+              <li class="socials__item"><a class="socials__link"> 
+                  <svg id="vk">
+                    <use xlink:href="assets/images/sprite/sprite.svg#vk"></use>
+                  </svg></a></li>
+              <li class="socials__item"><a class="socials__link"> 
+                  <svg id="git">
+                    <use xlink:href="assets/images/sprite/sprite.svg#vk"></use>
+                  </svg></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__row">
+        <div class="footer__col footer__col-left">
+          <div class="footer__text text-content">
+            <p>Я веб-разработчик из Рязани, и этот сайт я сделал в рамка</p>
+          </div>
+        </div>
+        <div class="footer__col footer__col-right">
+          <div class="footer__copyright">© Светлана Филимонова | создано с любовью в LoftSchool | 2017</div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

@@ -99,10 +99,18 @@ exports.images = images;
 exports.watch = watch;
 exports.server = server;
 
+
+  // ------------------------------------------ copy fonts --------------------------------//
+  gulp.task('copy.fonts', function() {
+    return gulp.src('./src/fonts/**/*.*', {since: gulp.lastRun('copy.fonts')})
+      .pipe(gulp.dest('./build/assets/fonts'));
+  });
+
+
 // сборка и слежка
 gulp.task('default', gulp.series(
     clean,
-    gulp.parallel(styles, scripts, templates, images),
+    gulp.parallel(styles, scripts, templates, images, 'copy.fonts' ),
     gulp.parallel(watch, server)
 ));
 
@@ -135,8 +143,3 @@ gulp.task('sprite:svg', function() {
   });
 
 
-  // ------------------------------------------ copy fonts --------------------------------//
-gulp.task('copy.fonts', function() {
-    return gulp.src('./src/fonts/**/*.*', {since: gulp.lastRun('copy.fonts')})
-      .pipe(gulp.dest('./build/assets/fonts'));
-  });
