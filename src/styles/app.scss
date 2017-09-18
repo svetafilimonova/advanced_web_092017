@@ -1,8 +1,10 @@
+
 body{
-    margin: 10px;
-    background: #ccc
+    margin: 0;
+    // background: #ccc
 }
 
-@import 'common/technologies';
-@import 'common/slider';
-@import 'common/menu';
+@import 'normalize-scss-master/sass/_normalize';
+@import 'common/base';
+@import 'common/fonts';
+@import 'welcome';
