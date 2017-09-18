@@ -2,13 +2,18 @@ const gulp = require('gulp');
 const del = require('del');
 const browserSync = require('browser-sync').create();
 const pug = require('gulp-pug');
+const svgmin = require('gulp-svgmin');
+const cheerio = require('gulp-cheerio');
+const replace = require('gulp-replace');
+const svgSprite = require('gulp-svg-sprite');
 
 // styles 
 const sass = require('gulp-sass');
 const rename = require('gulp-rename');
 const sourcemaps = require('gulp-sourcemaps');
 
-// scripts
+// scripts gulp sprite:svg
+
 const gulpWebpack = require('gulp-webpack');
 const webpack = require('webpack');
 const webpackConfig = require('./webpack.config.js')
@@ -94,9 +99,47 @@ exports.images = images;
 exports.watch = watch;
 exports.server = server;
 
+
+  // ------------------------------------------ copy fonts --------------------------------//
+  gulp.task('copy.fonts', function() {
+    return gulp.src('./src/fonts/**/*.*', {since: gulp.lastRun('copy.fonts')})
+      .pipe(gulp.dest('./build/assets/fonts'));
+  });
+
+
 // сборка и слежка
 gulp.task('default', gulp.series(
     clean,
-    gulp.parallel(styles, scripts, templates, images),
+    gulp.parallel(styles, scripts, templates, images, 'copy.fonts' ),
     gulp.parallel(watch, server)
 ));
+
+
+// ------------------svg sprites------------------------------------------------------------//
+gulp.task('sprite:svg', function() {
+    return gulp.src('./src/images/svg-sprites/*.svg')
+      .pipe(svgmin({
+        js2svg: {
+          pretty: true
+        }
+      }))
+      .pipe(cheerio({
+        run: function($) {
+          $('[fill]').removeAttr('fill');
+          $('[stroke]').removeAttr('stroke');
+          $('[style]').removeAttr('style');
+        },
+        parserOptions: { xmlMode: true }
+      }))
+      .pipe(replace('&gt;', '>'))
+      .pipe(svgSprite({
+        mode: {
+          symbol: {
+            sprite: '../sprite.svg'
+          }
+        }
+      }))
+      .pipe(gulp.dest('./src/images/sprite'));
+  });
+
+

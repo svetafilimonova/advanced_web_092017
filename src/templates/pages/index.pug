@@ -4,4 +4,69 @@ block variables
   - var title = 'Добро пожаловать'
 
 block content
+<<<<<<< HEAD
   h1 Главная страница 
+=======
+  div.wrapper.intro
+    .authorization
+      div.authorization__button
+        a(href="#").authorization-link Авторизоваться
+    .welcome-wrapper
+      div.welcome
+        div.welcome__photo
+          img.welcome__img(src="assets/images/myphoto.jpg")
+        .welcome__info
+          .welcome__name Светлана Филимонова
+          .welcome__site Личный сайт веб разработчика
+        .welcome__socials
+          ul.socials.socials_round
+            li.socials__item
+              a.socials__link 
+                //- svg(id="vk")
+                //-   use(xlink:href=`assets/images/sprite/sprite.svg#vk`)
+            li.socials__item
+              a.socials__link 
+                //- svg(id="git")
+                //-   use(xlink:href=`assets/images/sprite/sprite.svg#vk`)
+        .nav-menu.welcome__menu
+          ul.menu__list
+            li.menu__item
+              a(href="my-works.html").menu__link Мои работы
+            li.menu__item
+              a(href="about.html").menu__link Обо мне
+            li.menu__item
+              a(href="blog.html").menu__link Блог
+    .auth-form
+      .auth-form__title
+        .block-title Авторизуйтесь
+      .auth-form__row
+        .auth-form__icon
+        .auth-form__input
+          input(type="text")
+      .auth-form__row
+        .auth-form__icon
+        .auth-form__input
+          input(type="text")
+      .auth-form__row.auth-form__row-check
+        input(type="checkbox" id="check")
+        label(for='check') Я человек
+      .auth-form__row.auth-form__row-radio
+        .auth-form__row-title Вы точно не робот?
+        input(type="radio" name="robot" id="yes")
+        label(for='yes') Да
+        input(type="radio" name="robot" id="no")
+        label(for='no') Не уверен
+    .auth-form__btn
+      ul.button-list.intro__button-list
+        li.button-item
+          a(href="about.html").button-link На главную
+        li.button-item
+          a(href="#").button-link Войти
+
+
+
+    .copyright © Светлана Филимонова | создано с любовью в LoftSchool | 2017
+      //- svg(id="vk")
+      //-   use(xlink:href=`assets/images/sprite/sprite.svg#vk`)
+
+>>>>>>> week2
